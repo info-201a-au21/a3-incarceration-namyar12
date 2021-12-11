@@ -1,4 +1,4 @@
-#load packages
+#load package
 
 library(dplyr)
 library(leaflet)
