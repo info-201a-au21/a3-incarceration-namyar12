@@ -1,0 +1,44 @@
+---
+title: "A3 - Incarcerations"
+Name: "Namya Rawal"
+output: html_document
+---
+
+```{r include=FALSE}
+library(knitr)
+source("analysis.R")
+```
+
+#Introduction
+
+This data uses the information provided by the Vera Institute of Research regarding the incarceration rates in the United States. This highlights how there is racism embedded in the system in our country. The study ranges from the year 1970 to 2018 and encapsulates different columns which represent values for jail populations among other things. The study highlights how there is a difference in numbers between total white jail population and black jail population. Through this assignment, I will be analysing the male juvenile jail population cases in California after the year 2000. Furthermore, with the increase in the number of racism in South region of the country, I was intrigued to compare the total white jail population as compared to black jail population in the South region. Lastly, I will be highlighting the county and states with the highest and lowest number of male incarceration rates and geographically analysing the male jail population across the country.
+
+
+#Summary Statistics 
+
+The results of the analysis were informative. The first statistic that I calculated was the total number of male incarcerations in the US. There have been `r total_male_population` male incarcerations in the country which helps us proportionate the following variables better. The second statistic that I calculated was the rate of male juvenile incarcerations in the United States. The percentage was `r rate_male_juvenile`. This number was not too high and hence it was informative to understand that a large majority of the incarcerations in the country are adults. The third statistic that I calculated was the state with the highest and lowest male juvenile incarcerations. The state with the highest numbers was New York at `r num_state_high` and the state with the lowest was Alaska with `r num_state_low` incarcerations. Then I wanted to understand the level of difference between the total number of black and white incarcerations to understand the racism in the system. The total number of black incarcerations in the country are `r black_jail_total` and the total number of white incarcerations were `r white_jail_total`. Lastly, I wanted to compare the number of black vs white incarcerations in a specific region. I found out that the total number of black incarcerations in the South are `r black_incarcerations_south` and white incarcerations were `r white_incarcerations_south`. 
+
+# Trends Over time chart
+
+```{r echo = FALSE, warning=FALSE}
+line_graph_compare
+```
+
+This line graph aims to visually compare the black juvenile jail population in the most and least populated states of the United States since year 2000. California has been reported to have a higher white jail population than black jail population. However, interestingly the same is not applicable for the juvenile jail population. The chart illustrates the change in male juvenile incarceration rates starting from 2000 to year 2020 in the states California and Wyoming. The graph highlights how the incarcerations were at a peak between 2002 and 2005 for both the states. Ever since 2005 the male juvenile incarcerations have been falling. Hence, this linegraph is informative because it allows the state government to see that their policies have been effective. One interesting finding from this graph was that even though there is a large population difference between the two states, they seem to be following a very similar pattern. 
+
+#Variable Comparison chart
+
+```{r echo = FALSE, warning=FALSE}
+bargraph
+```
+
+This bargraph aims to compare the white jail population to the black jail population in the South region of the country. There has been a rise in the racism articles in news about the South and this promped me to delve deeper into this data. However, one interesting finding from this data is that white incarcerations is actually higher than the black incarcerations in the South region. This graph proves the news articles often portray fake news it is important to base our judgements on multiple reliable sources. 
+
+#Map
+
+```{r echo = FALSE, warning=FALSE}
+map
+```
+
+This map aims to visually represent the rate of male jail population across the country. This map geographically highlights the counties with higher male jail populations in the shades of light blue as compares to low male jail population counties in dark blue. This map helps federal agencies understand the main pain points or counties which need implementation of stricter crime rules and education programes to reduce these numbers. One interesting finding is that the shades of blue gets extremely light in the north eastern part of the country and hence it is important to execute more stringent laws in those counties. 
+
